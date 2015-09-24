@@ -55,10 +55,10 @@ Settings settings = {
 
 void loadConfig() {
   Serial.println("Loading configuration from EEPROM");
-  if (//EEPROM.read(CONFIG_START + sizeof(settings) - 1) == settings.version_of_program[3] // this is '\0'
-      EEPROM.read(CONFIG_START + sizeof(settings) - 2) == settings.version_of_program[2] &&
-      EEPROM.read(CONFIG_START + sizeof(settings) - 3) == settings.version_of_program[1] &&
-      EEPROM.read(CONFIG_START + sizeof(settings) - 4) == settings.version_of_program[0])
+  if (//EEPROM.read(CONFIG_START + sizeof(settings) - 1) == settings.config_version[3] // this is '\0'
+      EEPROM.read(CONFIG_START + sizeof(settings) - 2) == settings.config_version[2] &&
+      EEPROM.read(CONFIG_START + sizeof(settings) - 3) == settings.config_version[1] &&
+      EEPROM.read(CONFIG_START + sizeof(settings) - 4) == settings.config_version[0])
   { 
     //Version was ok. Read settings.
     for (unsigned int t=0; t<sizeof(settings); t++) 
