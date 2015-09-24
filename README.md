@@ -20,4 +20,4 @@ If device is set to act as a slave, it will try to connect to a host. If it cann
 - host_ip: Host IP for communicating/polling (slave mode)
 - led_mode: int for selecting different led modes
 - led_speed: int for selecting speed for led modes
-  - led_color: color for led modes
+- led_color: color for led modes
